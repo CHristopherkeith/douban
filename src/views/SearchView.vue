@@ -58,6 +58,7 @@ export default {
     }
   },
   created: function () {
+    console.log(this.$store)
     const q = this.$route.params.q
     if (q) {
       // console.log(q)

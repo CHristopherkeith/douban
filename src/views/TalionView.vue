@@ -7,7 +7,7 @@
           type="search"
           name="query"
           v-model.trim.lazy="queryStr"
-          @keyup.enter="goSearch()">
+          @keyup.enter="goSearch" @change="changeEvent" >
       </form>
     </div>
     <ul class="has-header">
@@ -103,6 +103,9 @@ export default {
           q: this.queryStr
         }
       })
+    },
+    changeEvent: function () {
+      console.log(arguments)
     }
   }
 }
