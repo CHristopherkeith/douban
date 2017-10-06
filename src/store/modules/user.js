@@ -22,6 +22,7 @@ const getters = {
 
 const mutations = {
   updateData (state, payload) {
+    // console.log(state)
     switch (payload.name) {
       case 'email':
         state.temp_email = payload.value

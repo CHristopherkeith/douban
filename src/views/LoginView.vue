@@ -9,7 +9,7 @@
         <label>
           <strong>邮箱</strong>
           <input
-            v-model="email"
+            :value="email"
             type="email"
             name="email"
             @input="updateData"
@@ -21,7 +21,7 @@
           <strong>请输入密码</strong>
           <template v-if="passType === 'password'">
             <input
-            v-model="token"
+            :value="token"
             type="password"
             name="token"
             @input="updateData"
@@ -29,7 +29,7 @@
           </template>
           <template v-if="passType === 'text'">
             <input
-            v-model="token"
+            :value="token"
             type="text"
             name="token"
             @input="updateData"
@@ -73,7 +73,9 @@ export default {
       isDisabled: false,    // Disabled submit button
       isShow: 0,            // Show pwd
       passType: 'password',
-      error: ''             // Verification results
+      error: ''  // Verification results
+      // email: '',
+      // token: ''
     }
   },
   computed: {

@@ -74,6 +74,7 @@ export default {
     }
   },
   created () {
+    console.log(this.$store)
     // Get local user filling store/user
     if (localStorage.getItem('email')) {
       this.$store.commit({
